@@ -1,3 +1,17 @@
 @tailwind base;
+/* 
+  Esto inyecta los estilos base de Tailwind y cualquier estilo base 
+  registrado por plugins.
+*/
+
 @tailwind components;
+/* 
+  Esto inyecta las clases de componentes de Tailwind y cualquier 
+  clase de componente registrado por los plugins.
+*/
+
 @tailwind utilities;
+/* 
+  Esto inyecta las clases de utilidad de Tailwind y cualquier 
+  clase de utilidad registrada por los plugins.
+*/
