@@ -15,3 +15,15 @@
   Esto inyecta las clases de utilidad de Tailwind y cualquier 
   clase de utilidad registrada por los plugins.
 */
+
+@responsive {
+  .rotate-45 {
+    transform: rotate(45deg);
+  }
+}
+
+@variants hover {
+  .zoom {
+    transform: scale(2);
+  }
+}
