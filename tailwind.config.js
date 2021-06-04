@@ -9,6 +9,8 @@ module.exports = {
     rotate:['responsive'],
     extend: {
       opacity: ['disabled'],
+      backgroundColor: ['active'],
+      textDecoration: ['focus-visible']
     },
   },
   plugins: [],
