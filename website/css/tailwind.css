@@ -1,0 +1,37 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@responsive {
+  .rotate-45 {
+    transform: rotate(45deg);
+  }
+}
+
+@variants hover {
+  .zoom {
+    transform: scale(2);
+  }
+}
+
+.alert {
+  @apply m-4 p-3 border rounded;
+}
+
+.alert-default {
+  @apply bg-gray-300 text-gray-900 border-gray-900;
+}
+
+.alert-danger {
+  @apply bg-red-300 text-red-900 border-red-900;
+}
+
+.alert-warning {
+  @apply bg-yellow-300 text-yellow-900 border-yellow-900;
+}
+
+.alert-info {
+  @apply bg-blue-300 text-blue-900 border-blue-900;
+}
