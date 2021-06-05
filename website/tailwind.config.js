@@ -6,6 +6,9 @@ module.exports = {
       colors: {
         'primary': '#f3c614',
         'secondary': '#353535',
+      },
+      hright: {
+        '80': '20rem'
       }
     },
   },
