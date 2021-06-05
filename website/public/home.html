@@ -17,16 +17,40 @@
       <div class="text-2xl">&equiv;</div>
     </header>
 
-    <main>
+    <main class="bg-gray-200">
       <div 
         style="background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80');"
         class="h-52 md:h-80 bg-no-repeat bg-center bg-cover"
       ></div>
+      <section class="container mx-auto grid justify-center grid-flow-row md:grid-flow-col gap-3">
+        <article class="md:mx-auto rounded-lg mt-4 md:flex md:bg-white">
+          <figure>
+            <img class="w-full md:w-48 md:h-full cover rounded-lg md:rounded-r-none" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&h=500&q=80" alt="Amburguesa con queso">
+          </figure>
+          <div class="md:p-0 md:flex md:flex-col md:justify-center h-auto p-2 mx-2 relative bg-white md:bg-transparent md:mt-0 rounded-lg -mt-6">
+            <h2 class="text-gray-800 tracking-tight text-xl font-extrabold text-center uppercase">Cheese Hamburguer</h2>
+            <p class="text-gray-800 mb-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
+            <div class="text-lg font-bold text-s text-gray-700">$4.99</div>
+            <div class="text-primary text-lg">&starf;&starf;&starf;&starf;&star;</div>
+          </div>
+        </article>
+        <article class="md:mx-auto rounded-lg mt-4  md:flex md:bg-white">
+          <figure>
+            <img class="w-full md:w-48 md:h-full cover rounded-lg md:rounded-r-none" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&h=500&q=80" alt="Amburguesa con queso">
+          </figure>
+          <div class="md:p-0 md:flex md:flex-col md:justify-center h-auto p-2 mx-2 relative bg-white md:bg-transparent md:mt-0 rounded-lg -mt-6">
+            <h2 class="text-gray-800 tracking-tight text-xl font-extrabold text-center uppercase">Cheese Hamburguer</h2>
+            <p class="text-gray-800 mb-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
+            <div class="text-lg font-bold text-s text-gray-700">$4.99</div>
+            <div class="text-primary text-lg">&starf;&starf;&starf;&starf;&star;</div>
+          </div>
+        </article>
+        
+      </section>
     </main>
 
     <footer
       class="
-        absolute
         flex
         items-center
         md:flex-row
@@ -34,7 +58,6 @@
         md:items-center
         flex-col
         p-4
-        bottom-0
         w-full
         bg-secondary
         text-gray-50
