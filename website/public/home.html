@@ -17,12 +17,12 @@
       <div class="text-2xl">&equiv;</div>
     </header>
 
-    <main class="bg-gray-200">
+    <main class="bg-gray-50 pb-16">
       <div 
         style="background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80');"
         class="h-52 md:h-80 bg-no-repeat bg-center bg-cover"
       ></div>
-      <section class="container mx-auto grid justify-center grid-flow-row md:grid-flow-col gap-3">
+      <section class="pt-4 px-4 pb-16 container mx-auto grid justify-center grid-flow-row md:grid-flow-col gap-3">
         <article class="md:mx-auto rounded-lg mt-4 md:flex md:bg-white">
           <figure>
             <img class="w-full md:w-48 md:h-full cover rounded-lg md:rounded-r-none" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&h=500&q=80" alt="Amburguesa con queso">
@@ -46,6 +46,25 @@
           </div>
         </article>
         
+      </section>
+
+      <section class="px-4 flex flex-col md:items-center">
+        <form class="md:w-1/2">
+          <h2 class="mb-4 text-2xl font-bold text-secondary">Contact Us</h2>
+          <div>
+            <label for="name">Name</label>
+            <input class="leading-sung focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-800 placeholder-secondary w-full bg-white border border-blue-400 rounded-sm px-2" type="text" name="name" id="name" placeholder="Name">
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input class="leading-sung focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-800 placeholder-secondary w-full bg-white border border-blue-400 rounded-sm px-2" type="email" name="email" id="email" placeholder="Email">
+          </div>
+          <div>
+            <label for="message">Message</label>
+            <textarea class="max-h-32 leading-sung focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-800 placeholder-secondary w-full bg-white border border-blue-400 rounded-sm px-2" name="message" id="message" cols="30" rows="10"></textarea>
+          </div>
+          <input type="button" class="hover:bg-yellow-300 cursor-pointer border-2 border-primary mt-4 w-full font-bold text-center bg-primary p-2 rounded-md text-gray-900" value="Send">
+        </form>
       </section>
     </main>
 
