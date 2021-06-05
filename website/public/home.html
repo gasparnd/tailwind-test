@@ -4,17 +4,52 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">    <title>Footer</title>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <header
-      class="flex justify-between items-center bg-secondary text-white px-2"
-    >
-      <figure>
-        <img src="assets/logo.svg" alt="Logo" class="h-20 py-1" />
-      </figure>
-      <div class="text-2xl">&equiv;</div>
+    <header>
+      <nav  x-data="{ open: false }" class="pb-4 bg-secondary text-gray-100">
+        <div class="flex justify-between items-center bg-secondary text-gray-100 px-2">
+          <figure>
+            <img src="assets/logo.svg" alt="Logo" class="h-20 py-1" />
+          </figure>
+          <button @click="open = true" class="text-3xl focus:outline-none cursor-pointer">&equiv;</button>
+        </div>
+
+        <div x-show="open"
+          @click.away="open = false"
+          x-transition:enter="transition ease-linear duration-300"
+          x-transition:enter-start="opacity-0 transform -translate-y-4"
+          x-transition:enter-end="opacity-100 transform translate-y-0"
+          x-transition:leave="transition ease-linear duration-300"
+          x-transition:leave-start="opacity-100 transform translate-y-0"
+          x-transition:leave-end="opacity-0 transform -translate-y-4"
+        >
+          <div class="mx-4 flex flex-col md:flex-row">
+            <input class="md:w-5/6 w-full mr-1 border-2 text-gray-100 border-gray-100 px-4 py-1 rounded-md bg-secondary" placeholder="Search..." type="search" name="" id="">
+            <input class="md:w-1/6 w-1/2 md:mt-0 mt-2 border-2 border-gray-100 bg-transparent rounded-md cursor-pointer" type="button" value="Search">
+          </div>
+          <div class="mx-4 flex flex-col md:flex-row mt-2">
+            <div>
+              <h4 class="inline-block underline mr-2">Price: </h4>
+              <span class="text-primary mx-1 cursor-pointer underline">low</span>
+              <span class="text-gray-50 mx-1 cursor-pointer ">standard</span>
+              <span class="text-gray-50 mx-1 cursor-pointer">hight</span>
+            </div>
+            <span class="hidden md:inline-block mx-2">|</span>
+            <div>
+              <h4 class="inline-block underline mx-0 md:mx-2">Starts: </h4>
+              <span class="text-gray-50 mx-1 cursor-pointer">&starf;</span>
+              <span class="text-gray-50 mx-1 cursor-pointer">&starf; &starf;</span>
+              <span class="text-gray-50 mx-1 cursor-pointer">&starf; &starf; &starf;</span>
+              <span class="text-primary mx-1 cursor-pointer">&starf; &starf; &starf; &starf;</span>
+              <span class="text-gray-50 mx-1 cursor-pointer">+5</span>
+            </div>
+          </div>
+        </div>
+      </nav>
     </header>
 
     <main class="bg-gray-50 pb-16">
@@ -53,17 +88,17 @@
           <h2 class="mb-4 text-2xl font-bold text-secondary">Contact Us</h2>
           <div>
             <label for="name">Name</label>
-            <input class="leading-sung focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-800 placeholder-secondary w-full bg-white border border-blue-400 rounded-sm px-2" type="text" name="name" id="name" placeholder="Name">
+            <input class="form-input" type="text" name="name" id="name" placeholder="Name">
           </div>
           <div>
             <label for="email">Email</label>
-            <input class="leading-sung focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-800 placeholder-secondary w-full bg-white border border-blue-400 rounded-sm px-2" type="email" name="email" id="email" placeholder="Email">
+            <input class="form-input" type="email" name="email" id="email" placeholder="Email">
           </div>
           <div>
             <label for="message">Message</label>
-            <textarea class="max-h-32 leading-sung focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-800 placeholder-secondary w-full bg-white border border-blue-400 rounded-sm px-2" name="message" id="message" cols="30" rows="10"></textarea>
+            <textarea class="max-h-32 form-input" name="message" id="message" cols="30" rows="10"></textarea>
           </div>
-          <input type="button" class="hover:bg-yellow-300 cursor-pointer border-2 border-primary mt-4 w-full font-bold text-center bg-primary p-2 rounded-md text-gray-900" value="Send">
+          <input type="button" class="form-btn" value="Send">
         </form>
       </section>
     </main>
